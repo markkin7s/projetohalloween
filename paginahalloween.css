@@ -1,0 +1,87 @@
+@font-face {
+        font-family: fonte;
+        src: url('/fonts/who asks satan.ttf');
+}
+
+@font-face {
+        font-family: fonte1;
+        src: url('/fonts/Musicality.ttf');
+}
+
+
+body {
+        font-family: Arial, sans-serif; 
+        color: white;
+        height: 100vh;
+        margin: 0;
+        background-image: url('/images/E\ V\ I\ L\ ▪\ G\ A\ M\ E.gif');
+        overflow: hidden;
+        padding-left: 20%;
+        padding-right: 20%;
+        line-height: 300%;
+}
+
+
+.texto 
+{
+        padding: 10px 0px 0px 0px;
+        text-align: center;
+        font-size: 50px;
+        font-family: fonte1;
+        color: red;
+}
+
+h1
+{
+        padding: 20px 0px 0px 0px;
+        width: 100%;
+        text-align: center;
+        font-family: fonte;
+        font-size: 90px;
+        color: white;
+        letter-spacing: 10px;
+        
+}
+
+.caixa 
+{
+        text-align: center;
+        background: rgba(255, 255, 255, 0);
+        padding: 20px;
+        border-radius: 10px;
+}
+
+        input[type="text"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+}
+
+button
+{
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #5c5c5c;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+}
+
+.jumpscare 
+{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('/images/download.gif') no-repeat center center;
+        background-size: cover;
+        z-index: 10;
+}
+
+audio 
+{
+        display: none; /* Esconde o player de áudio */
+}
