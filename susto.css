@@ -1,0 +1,23 @@
+@font-face {
+    font-family: fonte1;
+    src: url('/fonts/Musicality.ttf');
+}
+
+
+body {
+    background-color: black;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-family: fonte1;
+    font-size: 20px;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    color:  red;
+    display: flex;
+    justify-content: center;
+}

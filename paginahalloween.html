@@ -4,77 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAMHEIN</title>
-
+    <title>Página Halloween</title>
     <link rel="stylesheet" href="paginahalloween.css">
+    <script>
+        function verificar() {
+            const palavra = document.getElementById("palavra").value.toUpperCase();
+            if (palavra === "SAMHAIN") {
+                alert("Palavra Correta! Siga para a primeira sala.");
+            } else {
+                window.location.href = "susto.html"; // Redireciona para a nova página
+            }
+        }
+    </script>
 </head>
 
 <body>
-    </head>
 
-    <body>
+    <h1>Descubra a palavra secreta!</h1>
 
-        <h1>Descubra a palavra secreta!</h1>
+    <p class="texto">
+        "Na noite em que as almas dançam e as bruxas se reúnem
+        um antigo festival celebra o que o outono ensina.
+        Quando as sombras crescem e as folhas caem.
+        O nome que procuras, em mistério se entrelaçam.
+        Procure nas tradições, nas histórias que vêm. A resposta é um eco além do além."
+    </p>
 
-        <p class="texto">
-            "Na noite em que as almas dançam e as bruxas se reúnem
-            um antigo festival celebra o que o outono ensina.
-            Quando as sombras crescem e as folhas caem.
-            O nome que procuras, em mistério se entrelaçam.
-            Procure nas tradições, nas histórias que vêm. A resposta é um eco além do além."
-        </p>
+    <div class="caixa" id="caixa">
+        <h2>Qual é a palavra secreta?</h2>
+        <input type="text" id="palavra" placeholder="Digite a palavra...">
+        <button onclick="verificar()">Enviar</button>
+    </div>
 
-        <audio autoplay loop>
-            <source src="" type="audio/mpeg">
-            Seu navegador não suporta o elemento de áudio.
-        </audio>
 
-        <div class="caixa" id="caixa">
-            <h2>Qual é a palavra secreta?</h2>
-            <input type="text" id="palavra" placeholder="Digite a palavra...">
-            <button onclick="verificar()">Enviar</button>
-        </div>
-
-        <div class="jumpscare" id="jumpscare"></div>
-
-        <script>
-            function verificar() {
-                let palavra = document.getElementById('palavra').value;
-
-                if (palavra.toLowerCase() === 'samhein') {
-                    document.body.innerHTML = `
-<h1 style="color: #05ff00; text-align: center;">Você acertou! Volte para a primeira sala.</h1>
-                `;
-                } else {
-                    document.getElementById('caixa').innerHTML = `
-<h1 style="color: #ff0000; text-align: center;">Você errou! <br> Tente novamente.</h1>
-                `;
-                    setTimeout(() => {
-                        mostraImagem();
-                    }, 1000);
-                }
-            }
-
-            function mostraImagem() {
-                let image = document.getElementById('jumpscare');
-                image.style.display = 'block';
-
-                // Espera 5 segundos e volta à tela inicial
-                setTimeout(() => {
-                    image.style.display = 'none';
-                    resetarTela();
-                }, 5000);
-            }
-
-            function resetarTela() {
-                document.getElementById('caixa').innerHTML = `
-                <h2>Qual é a palavra secreta?</h2>
-                <input type="text" id="palavra" placeholder="Digite a palavra...">
-                <button onclick="verificar()">Enviar</button>
-            `;
-            }
-        </script>
-
-    </body>
+</body>
 
 </html>
